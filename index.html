@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>משחק מבחן</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/cfc84d67cf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<div id="intro" class="intro">
+		<div class="intro_item">
+			<div class="intro_text">ברוכים הבאים </div>
+			<h1 class="intro_text">משחק מבחן</h1>
+			<button id="introBtn" type="button" onclick="go(arrQuestions)">התחל</button>
+		</div>
+	</div>
+
+
+	<div id="testWindow" class="test_window">
+		<div id="numTest" class="num_test">שאלה: 1/20</div>
+		<div id="question" class="test_text"></div>
+		<div id="ans1" class="question" onclick="pressAnswer(this)">1</div>
+		<div id="ans2" class="question" onclick="pressAnswer(this)">2</div>
+		<div id="ans3" class="question" onclick="pressAnswer(this)">3</div>
+		<div id="ans4" class="question" onclick="pressAnswer(this)">4</div>
+		<div class="test_timer">
+			<div class="test_time">זמן:</div>
+			<div id="timerTest" class="test_time">00:00.0</div>
+		</div>
+		<div class="test_img">
+			<img id="testImg" src="" alt="">
+		</div>
+		<div class="progres_box">
+			<div id="progres" class="progres"></div>
+		</div>				
+	</div>
+
+	<div id="nextWhy" class="nextWhy">
+		<div class="nextWhy_row">
+			<button id="nextQuesBtn" onclick="nextQuesBtn()">שאלה הבאה</button>
+			<img class="nextWhy_img" src="./Img/icons/arrow.png" alt="">
+		</div>
+		<div class="nextWhy_row">
+			<button id="whyBtn" onclick="whyBtn()">הסבר</button>
+			<img class="nextWhy_img img2" src="./Img/icons/info.png" alt="">			
+		</div>
+
+	</div>
+
+	<div id="whyBlock" class="why">
+		<div id="whyYesNo" class="why_yes_no">נכון</div>		
+		<p id="whyText"></p>
+		<button id="whyBtnOk" type="button" onclick="whyBtnOk()">הבנתי</button>
+	</div>
+
+
+	<div id="finish" class="finish">
+		<div class="finish_item">
+			<div class="finish-text">מזל טוב! </div>
+			<div class="statistic_text">הנתון שלך:</div>
+			<div class="statistic">
+				<div id="statisticTrue" class="statistic_true"></div>
+				<div id="statisticTime" class="statistic_time"></div>
+			</div>
+			<button id="again" type="button" onclick="again()">אתה רוצה לנשות שוב?</button>
+			<button id="mistakes" type="button" onclick="mistakes()">לעבוד על הטעויות שלך?</button>
+		</div>
+		<img id="salute1" src="./Img/salute/1.png" alt="">
+		<img id="salute2" src="./Img/salute/2.png" alt="">
+		<img id="salute3" src="./Img/salute/3.png" alt="">
+		<img id="salute4" src="./Img/salute/4.png" alt="">
+	</div>
+
+	<div id="sounds" class="sounds" onclick="soundOmOff()">
+		<i id="soundIcon" class="fas fa-volume-up"></i>
+	</div>
+
+<script src="./JS/data.js"></script>	
+<script src="./JS/app.js"></script>	
+
+</body>
+</html>
